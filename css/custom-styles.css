@@ -24,6 +24,9 @@ h2, .list-contact-details {
   font-weight: 700;
   line-height: 48px;
   margin: 24px 0px 24px 0px; }
+  @media screen and (max-width: 640px) {
+    h2, .list-contact-details {
+      font-weight: 600; } }
   h2 a, .list-contact-details a {
     color: #222222;
     text-decoration: none; }
