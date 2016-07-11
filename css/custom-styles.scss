@@ -17,7 +17,7 @@ $color-yellow: yellow;
 }
 @mixin sans-serif {
 	@include all-text;
-  font-family: "freight-text-pro";
+  font-family: "freight-sans-pro",sans-serif;
 }
 
 /* Typography: */
@@ -37,11 +37,11 @@ h2 {
   @include sans-serif;
   color: $color-grey-90;
 	font-size: 26px;
-	font-weight: 700;
+	font-weight: 300;
 	line-height: 48px;
 	margin: 24px 0px 24px 0px;
   @media screen and (max-width: 640px) {
-  	font-weight: 600;
+  	font-weight: 300;
   }
 	a {
 		color: $color-grey-90;
