@@ -19,6 +19,15 @@ $color-yellow: yellow;
 	@include all-text;
   font-family: "freight-sans-pro",sans-serif;
 }
+@mixin link {
+	color: $color-grey-90;
+  text-decoration: none;
+	&:hover{
+		transition: 0.3s ease;
+    color: $color-blue;
+    text-decoration: none;
+	}
+}
 
 /* Typography: */
 h1 {
@@ -35,7 +44,6 @@ h1 {
 }
 h2 {
   @include sans-serif;
-  color: $color-grey-90;
 	font-size: 26px;
 	font-weight: 300;
 	line-height: 48px;
@@ -43,42 +51,29 @@ h2 {
   @media screen and (max-width: 640px) {
   	font-weight: 300;
   }
-	a {
-		color: $color-grey-90;
-    text-decoration: none;
-		&:hover{
-      color: $color-grey-90;
-			transition: 0.3s ease;
-      color: $color-blue;
-      text-decoration: none;
-		}
-	}
+}
+.section-header {
+  margin-top: 48px;
 }
 p {
 	@include sans-serif;
+  color: $color-grey-90;
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: 300;
   line-height: 24px;
-	a {
-		color: $color-grey-90;
-    text-decoration: none;
-		&:hover{
-      color: $color-grey-90;
-			transition: 0.3s ease;
-      color: $color-blue;
-      text-decoration: none;
-		}
-	}
+  margin: 0px 0px 24px 0px;
+}
+a {
+ @include link;
 }
 .list-contact-details {
   @include all-text;
   @include sans-serif;
   @extend h2;
-  padding: 0px;
+  padding: 0px 0px 0px 0px;
   list-style-type: none;
 }
 li {
-  line-height: 48px; // To add space between email, phone and presever vertical rhythm  
   margin: 0px 24px 0px 0px;
   @media screen and (min-width: 640px) {
   	display: inline; // On small devices inline doesn't work as the phone number breaks half way
@@ -88,6 +83,24 @@ li {
   color: $color-red;
 	font-weight: 300;
   margin: 0px 16px 0px 0px;
+}
+
+.button {
+	@include sans-serif;
+  @extend p;
+	font-weight: 900;
+  margin: 48px 0px 24px 0px;
+  padding: 2px 0px 2px 0px;
+  color: $color-grey-90;
+  background: $color-white;
+  border: 1px solid $color-grey-15;
+  border-radius: 0px;
+	&:hover{
+		transition: 0.3s ease;
+    color: darken($color-grey-90, 15% );
+    text-decoration: none;
+    border: 1px solid darken($color-grey-90, 15% );
+	}
 }
 
 // Themes
@@ -104,6 +117,7 @@ html, body {
   min-height: 100vh; // These two lines are counted as one :-)
   display: flex;
   align-items: center;
+  border-bottom: 1px $color-grey-05 solid;
 }
 @media screen and (max-width: 768px) {
 	.container {
@@ -111,3 +125,18 @@ html, body {
 		margin-right: 16px;
 	}
 }
+
+.image-mask {
+  background: $color-grey-05;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  margin: 48px 0px 80px 0px;
+	&:hover{
+		transition: 0.5s cubic-bezier(.17,.67,.83,.67);
+    box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.10);
+    transform: scale(1.01, 1.01);
+    transform-origin: center;
+	}
+}
+
+
