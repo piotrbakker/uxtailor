@@ -10,12 +10,12 @@ h1 {
   font-size: 68px;
   line-height: 72px;
   margin: 24px 0px 0px 0px; }
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 970px) {
     h1 {
       font-size: 42px;
       line-height: 48px; } }
 
-h2, .list-contact-details {
+h2, .list-contact-details, .button {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-family: "freight-sans-pro",sans-serif;
@@ -24,13 +24,13 @@ h2, .list-contact-details {
   line-height: 48px;
   margin: 24px 0px 24px 0px; }
   @media screen and (max-width: 640px) {
-    h2, .list-contact-details {
+    h2, .list-contact-details, .button {
       font-weight: 300; } }
 
 .section-header {
   margin-top: 48px; }
 
-p, .button {
+p, .section-label {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-family: "freight-sans-pro",sans-serif;
@@ -68,25 +68,36 @@ li {
   font-weight: 300;
   margin: 0px 16px 0px 0px; }
 
+.section-label {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: "freight-sans-pro",sans-serif;
+  font-weight: 600;
+  padding: 8px 0px 8px 0px;
+  position: relative;
+  top: -20px;
+  border: 1px solid #F4F4F4;
+  background: #FFFFFF;
+  color: #222222;
+  border-radius: 0px; }
+
 .button {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-family: "freight-sans-pro",sans-serif;
-  font-weight: 900;
-  margin: 48px 0px 24px 0px;
-  padding: 2px 0px 2px 0px;
   color: #222222;
-  background: #FFFFFF;
-  border: 1px solid #DBDBDB;
-  border-radius: 0px; }
+  background: none;
+  border-radius: 2px; }
   .button:hover {
     transition: 0.3s ease;
-    color: black;
-    text-decoration: none;
-    border: 1px solid black; }
+    color: #4A90E2;
+    text-decoration: none; }
 
 .background-white {
   background: #FFFFFF; }
+
+.background-grey {
+  background: #fcfcfc; }
 
 html, body {
   height: 100%; }
@@ -95,8 +106,7 @@ html, body {
   min-height: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  border-bottom: 1px #F4F4F4 solid; }
+  align-items: center; }
 
 @media screen and (max-width: 768px) {
   .container {
@@ -112,5 +122,27 @@ html, body {
     box-shadow: 0px 0px 48px 0px rgba(0, 0, 0, 0.1);
     transform: scale(1.01, 1.01);
     transform-origin: center; }
+
+.chevron::before {
+  border-style: solid;
+  border-color: #D0021B;
+  border-width: 1px 1px 0 0;
+  content: '';
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 1px;
+  transform: rotate(-45deg); }
+
+.chevron.right:before {
+  left: 0;
+  transform: rotate(45deg); }
+
+.container {
+  padding: 0 64px 0 64px; }
+  @media screen and (max-width: 970px) {
+    .container {
+      padding: 0 16px 0 16px; } }
 
 /*# sourceMappingURL=custom-styles.css.map */
