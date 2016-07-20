@@ -148,4 +148,17 @@ html, body {
       margin-left: 16px;
       margin-right: 16px; } }
 
+.slidein {
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-timing-function: 2s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    width: 200%; }
+  to {
+    margin-top: 0%;
+    width: 100%; } }
+
 /*# sourceMappingURL=custom-styles.css.map */
