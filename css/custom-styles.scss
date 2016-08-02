@@ -186,23 +186,3 @@ html, body {
 		margin-right: 16px;
   }
 }
-
-.slidein {
-  animation-duration: 2s;
-  animation-name: slidein;
-  animation-timing-function: 2s cubic-bezier(.17,.67,.83,.67);
-}
-
-@keyframes slidein {
-  from {
-    margin-top: 100%;
-    width: 200%; 
-  }
-
-  to {
-    margin-top: 0%;
-    width: 100%;
-  }
-}
-
-
