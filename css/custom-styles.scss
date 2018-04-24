@@ -17,7 +17,7 @@ $color-yellow: yellow;
 }
 @mixin sans-serif {
 	@include all-text;
-  font-family: "mr-eaves-xl-modern", "freight-sans-pro",sans-serif;
+  font-family: "mr-eaves-xl-modern",sans-serif;
 }
 @mixin link {
 	color: $color-grey-90;
