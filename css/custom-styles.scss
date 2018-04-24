@@ -17,7 +17,7 @@ $color-yellow: yellow;
 }
 @mixin sans-serif {
 	@include all-text;
-  font-family: "freight-sans-pro",sans-serif;
+  font-family: "mr-eaves-xl-modern", "freight-sans-pro",sans-serif;
 }
 @mixin link {
 	color: $color-grey-90;
@@ -42,6 +42,15 @@ h1 {
   	line-height: 48px;
   }
 }
+.header__jumbo {
+	font-size: 80px;
+	line-height: 88px;
+	@media screen and (max-width: 970px) {
+  	font-size: 56px;
+  	line-height: 64px;
+  }
+}
+
 h2 {
   @include sans-serif;
 	font-size: 26px;
@@ -127,6 +136,10 @@ li {
 	background: lighten($color-grey-05, 2% );
 }
 
+.background--gradient {
+background-image: linear-gradient(-135deg, #FFFFFF 0%, #FBFBFB 100%);
+}
+
 // Layout
 html, body {
   height: 100%;
@@ -175,7 +188,6 @@ html, body {
 	transform: rotate(45deg);
 }
 
-
 .container { // The 12 column layout is too wide and this makes it a bit more narrow.
   padding: 0 64px 0 64px;
   @media screen and (max-width: 970px) {
@@ -185,4 +197,114 @@ html, body {
 		margin-left: 16px;
 		margin-right: 16px;
   }
+}
+
+//Device wireframe
+
+@keyframes popout {
+  0% {
+    transform: scale(1,1) translateX(-24px);
+		transform-origin: left bottom;
+		opacity: 0;
+  }
+	1% {
+		opacity: 1;
+	}
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+.phone {
+  border: 2px solid $color-grey-90;
+  border-radius: 6px;
+	margin: 12px 8px 0 8px;
+  height: 36px;
+  width: 24px;
+  position: relative;
+	.home-button {
+		left: 8px;
+	}
+	animation-name: popout;
+	animation-duration: 0.4s;
+	animation-timing-function: ease-out;
+}
+.tablet {
+  border: 2px solid $color-grey-90;
+  border-radius: 6px;
+	margin: 12px 8px 0 8px;
+  height: 60px;
+  width: 44px;
+  position: relative;
+	.home-button {
+		left: 18px;
+	}
+	animation-name: popout;
+	animation-duration: 0.6s;
+	animation-timing-function: ease-out;
+}
+.browser {
+  border: 2px solid $color-grey-90;
+  border-radius: 6px;
+	margin: 12px 8px 0 8px;
+  height: 44px;
+  width: 60px;
+  position: relative;
+	.home-button {
+		left: 18px;
+	}
+	animation-name: popout;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-out;
+}
+.watch {
+  border: 2px solid $color-grey-90;
+  border-radius: 4px;
+	margin: 12px 8px 0 8px;
+  height: 12px;
+  width: 12px;
+  position: relative;
+	animation-name: popout;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+}
+.home-button {
+  border: 2px solid $color-grey-90;
+  border-radius: 2px;
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  bottom: 4px;
+}
+.window-button-1 {
+	background: $color-grey-90;
+  border-radius: 1px;
+  height: 2px;
+  width: 2px;
+  position: absolute;
+  top: 4px;
+	left: 4px;
+}
+.window-button-2 {
+	@extend .window-button-1;
+	left: 7px;
+}
+.window-button-3 {
+	@extend .window-button-1;
+	left: 10px;
+}
+.side-button {
+	background: $color-grey-90;
+	border-radius: 2px;
+  height: 3px;
+  width: 3px;
+  position: absolute;
+	top: 1px;
+	left: 8px;
+}
+.outer {
+	height: 96px;
+}
+.inner {
+	display: inline-block;
 }
